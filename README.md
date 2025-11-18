@@ -412,7 +412,7 @@ The app distinguishes between two types of errors:
 
 ## Future Improvements
 
-If more time were available:
+If more time were available I would have:
 
 1. **Enhanced Empty States**: Dedicated empty state composables with retry buttons
 2. **Backend Error Parsing**: Parse structured error payloads from API responses
@@ -426,18 +426,5 @@ If more time were available:
 10. **Error Recovery**: More sophisticated error recovery strategies
 
 ---
-
-## Conclusion
-
-The app successfully implements all core requirements from the assignment:
-- ✅ List and detail screens
-- ✅ KMP cache with TTL/staleness
-- ✅ Offline mode
-- ✅ Auto-refresh
-- ✅ Background prefetch
-- ✅ Error handling
-- ✅ Tests (unit + UI)
-
-The implementation follows clean architecture principles, uses modern Android development practices, and provides a solid foundation for future enhancements.
 
 **Estimated Time Spent**: ~4-5 hours (as per assignment constraint)
