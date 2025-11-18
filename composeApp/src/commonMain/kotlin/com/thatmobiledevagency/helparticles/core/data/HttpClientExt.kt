@@ -44,6 +44,7 @@ suspend inline fun <reified T> responseToResult(
                     Json.decodeFromString<T>(text)
                 } catch (se: SerializationException) {
                     // explicit serialization failure
+                    // we could also enhance it to show payload errors as mentioned in the assignment
                     return Result.Error(DataError.RemoteErrors.SERIALIZATION)
                 }
                 Result.Success(parsed)

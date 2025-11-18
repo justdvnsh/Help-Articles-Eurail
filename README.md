@@ -7,7 +7,7 @@ A Kotlin Multiplatform (KMP) Android application that displays help articles wit
 **Rationale - Why KMP ? **
 
 - I felt that project wanted to test the KMP skills along with best coding practices.
-- That's why I decide to go with KMP, as this project is a pure compose multiplatform app, which not
+- That's why I decided to go with KMP, as this project is a pure compose multiplatform app, which not
 - only shows the KMP skills, but also displays the best coding practices and separation of concerns
 - of a regular android app.
 
@@ -30,7 +30,7 @@ https://drive.google.com/file/d/1VLdeDJsyPhyfFzZoB66SocLuNTlD4sKD/view?usp=shari
 
 ## Architecture
 
-The app follows **Clean Architecture** with clear separation of concerns:
+The app follows **Clean Architecture along with MVI** with clear separation of concerns:
 
 
 ### Layer Responsibilities
@@ -42,6 +42,8 @@ The app follows **Clean Architecture** with clear separation of concerns:
 **Key Principle**: Presentation and Data layers don't communicate directly - all communication flows through the Domain layer for better separation of concerns and scalability.
 
 **Data Flow** : presentation -> domain <- data
+
+```NOTE : We could have also gone with the classic MVVM architecture for a regular android app```
 
 ### Technology Stack
 

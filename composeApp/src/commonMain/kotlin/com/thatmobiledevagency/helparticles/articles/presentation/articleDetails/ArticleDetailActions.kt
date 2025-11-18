@@ -1,2 +1,0 @@
-package com.thatmobiledevagency.helparticles.articles.presentation.articleDetails
-

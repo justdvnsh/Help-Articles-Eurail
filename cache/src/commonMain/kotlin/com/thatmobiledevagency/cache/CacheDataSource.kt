@@ -9,6 +9,8 @@ import kotlin.time.ExperimentalTime
 
 class CacheDataSource @OptIn(ExperimentalTime::class) constructor(
     private val store: HelpArticleCache,
+    // added a provider as it makes it easier for testing for lesser flaky results
+    // also this could be used to implement platform specific time providers
     private val nowMsProvider: () -> Long = { Clock.System.now().toEpochMilliseconds() }
 ) {
     private val mutex = Mutex()
@@ -17,10 +19,8 @@ class CacheDataSource @OptIn(ExperimentalTime::class) constructor(
 
     companion object Companion {
         private const val KEY_LIST = "help_articles_cache_list"
-        private const val KEY_DETAIL = "help_articles_cache_detail"
 
         const val DEFAULT_LIST_TTL_MS: Long = 6 * 60 * 60 * 1000L
-        const val DEFAULT_DETAIL_TTL_MS: Long = 24 * 60 * 60 * 1000L
     }
 
     private suspend fun getWrapped(key: String): CacheWrapper? {

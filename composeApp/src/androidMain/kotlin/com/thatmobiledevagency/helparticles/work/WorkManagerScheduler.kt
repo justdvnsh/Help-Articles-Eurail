@@ -50,8 +50,4 @@ class WorkManagerScheduler(private val context: Context) {
             refreshWork
         )
     }
-
-    fun cancelPeriodicRefresh() {
-        WorkManager.getInstance(context).cancelUniqueWork(WORK_NAME)
-    }
 }
